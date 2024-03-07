@@ -60,7 +60,8 @@ namespace DotBoxesMinMax
 
                 // If AI's turn, get the highest score,
                 // if human's turn get the lowest score
-                // i.e. lowest score for human => best for AI
+                // i.e. Assume human makes the best move
+                // in order to calculate AI's best move
                 if (currentTurnIndex == AITurnIndex)
                 {
                     //bestScore = Math.Max(bestScore, nextMoveScore);

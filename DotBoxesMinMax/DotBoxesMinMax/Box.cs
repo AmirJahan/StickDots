@@ -29,6 +29,8 @@ namespace DotBoxesMinMax
 
         public int capturedBy = -1;
 
+        public int numConnectedLines = 0;
+
         public Box(Tuple<int, int> coordUppderLeft) 
         { 
             dotUpperLeft = coordUppderLeft;
@@ -47,8 +49,6 @@ namespace DotBoxesMinMax
             lineConnectedDict.Add(lineTop, false);
             lineConnectedDict.Add(lineRight, false);
             lineConnectedDict.Add(lineBottom, false);
-
-            capturedBy = -1;
         }
 
         public Box(Box otherBox)
@@ -71,6 +71,7 @@ namespace DotBoxesMinMax
             lineConnectedDict.Add(lineBottom, otherBox.lineConnectedDict[lineBottom]);
 
             capturedBy = otherBox.capturedBy;
+            numConnectedLines = otherBox.numConnectedLines;
         }
 
         public void AddLinesToSet(
@@ -82,33 +83,12 @@ namespace DotBoxesMinMax
             availableLines.Add(lineBottom);
         }
 
-        public bool ConnectDots(
+        public void ConnectDots(
             Tuple<Tuple<int, int>, Tuple<int, int>> lineToConnect, 
             int turnIndex)
         {
             lineConnectedDict[lineToConnect] = true;
-            return CheckIfCaptured(turnIndex);
-        }
-
-        public bool CheckIfCaptured(int turnIndex)
-        {
-            foreach(bool captured in lineConnectedDict.Values)
-            {
-                if (!captured) return false;
-            }
-            capturedBy = turnIndex;
-            return true;
-        }
-
-        public int CheckNumConnectedLines()
-        {
-            int connectedLinesCount = 0;
-            foreach (bool lineConnected in lineConnectedDict.Values)
-            {
-                if (lineConnected) connectedLinesCount++;
-            }
-
-            return connectedLinesCount;
+            numConnectedLines += 1;
         }
     }
 }

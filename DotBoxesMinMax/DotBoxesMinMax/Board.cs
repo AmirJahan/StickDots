@@ -25,6 +25,9 @@ namespace DotBoxesMinMax
         public HashSet<Tuple<Tuple<int, int>, Tuple<int, int>>> connectedLines = 
             new HashSet<Tuple<Tuple<int, int>, Tuple<int, int>>>();
 
+        public Queue<Tuple<Tuple<int, int>, Tuple<int, int>>> lastLineForBoxesWithThreeConnections = 
+            new Queue<Tuple<Tuple<int, int>, Tuple<int, int>>>();
+
         public Board(int h, int w)
         {
             height = h;
@@ -50,6 +53,13 @@ namespace DotBoxesMinMax
             connectedLines =
                 new HashSet<Tuple<Tuple<int, int>, Tuple<int, int>>>
                 (originalBoardState.connectedLines);
+
+            // Shallow copy
+            lastLineForBoxesWithThreeConnections.Clear();
+            foreach (var line in originalBoardState.lastLineForBoxesWithThreeConnections)
+            {
+                lastLineForBoxesWithThreeConnections.Enqueue(line);
+            }
         }
 
         public Box[][] InitializeBoxes()
@@ -94,43 +104,77 @@ namespace DotBoxesMinMax
             if (connectedLines.Contains(lineToConnect))
                 return -1;
 
-            // Does the person making the move capture a box
-            bool captured = false;
-
             connectedLines.Add(lineToConnect);
             availableLines.Remove(lineToConnect);
 
-            int firstDotRow = lineToConnect.Item1.Item1;
-            int firstDotCol = lineToConnect.Item1.Item2;
+            // Connect the line and get the number of connected line for each box
+            // Note: 1 move will affect 2 boxes
+            int[] numConnectedLines = CheckBothBoxConnections(true, turnIndex, lineToConnect);
 
-            bool isHorizontal = IsHorizontalLine(lineToConnect);
-            int varToChange = (isHorizontal ? firstDotRow : firstDotCol);
+            bool captured = CheckIfEitherBoxCaptured(numConnectedLines);
 
-            // If horizontal, check top and bottom boxes that share the same line
-            // if vertical, check left and right boxes that share the same line
-            for (int i = varToChange; i >= varToChange - 1; i--)
-            {
-
-                if (i < 0 || 
-                    isHorizontal && i >= height - 1 || 
-                    !isHorizontal && i >= width - 1)
-                    continue;
-
-                Box box = isHorizontal ? boxes[i][firstDotCol] : boxes[firstDotRow][i];
-
-                bool capturedThisBox = box.ConnectDots(lineToConnect, turnIndex);
-
-                if (capturedThisBox)
-                    AdjustScore(box);
-
-                captured = captured || capturedThisBox;
-            }
+            if (captured)
+                score[turnIndex] += 1;
 
             // Flip the index if the person making the move didn't capture a box
             if (!captured)
                 turnIndex = 1 - turnIndex;
 
             return turnIndex;
+        }
+
+        public bool CheckIfEitherBoxCaptured(int[] numConnectedLines)
+        {
+            foreach (int connections in numConnectedLines)
+            {
+                if (connections == 4) return true;
+            }
+            return false;
+        }
+
+        public int[] CheckBothBoxConnections(bool toConnect, int turnIndex,
+            Tuple<Tuple<int, int>, Tuple<int, int>> lineToConnect)
+        {
+            int[] numConnectionsEachBox = new int[2];
+            int firstDotRow = lineToConnect.Item1.Item1;
+            int firstDotCol = lineToConnect.Item1.Item2;
+
+            bool isHorizontal = IsHorizontalLine(lineToConnect);
+            int varToChange = (isHorizontal ? firstDotRow : firstDotCol);
+            int index = 0;
+            for (int i = varToChange; i >= varToChange - 1; i--)
+            {
+
+                if (i < 0 ||
+                    isHorizontal && i >= height - 1 ||
+                    !isHorizontal && i >= width - 1)
+                    continue;
+
+                Box box = isHorizontal ? boxes[i][firstDotCol] : boxes[firstDotRow][i];
+
+                if (toConnect)
+                    box.ConnectDots(lineToConnect, turnIndex);
+
+                numConnectionsEachBox[index] = box.numConnectedLines;
+
+                if (box.numConnectedLines == 3)
+                    AddLastLineToList(box);
+
+                index++;
+            }
+
+            return numConnectionsEachBox;
+        }
+
+        public void AddLastLineToList(Box box)
+        {
+            foreach (KeyValuePair<Tuple<Tuple<int, int>, Tuple<int, int>>, bool> entry in 
+                box.lineConnectedDict)
+            {
+                // Add to list if the line is not connected
+                if (!entry.Value)
+                    lastLineForBoxesWithThreeConnections.Enqueue(entry.Key);
+            }
         }
 
         public bool IsHorizontalLine(Tuple<Tuple<int, int>, Tuple<int, int>> line)
@@ -140,14 +184,6 @@ namespace DotBoxesMinMax
             if (line.Item1.Item1 == line.Item2.Item1)
                 return true;
             return false;
-        }
-
-        public void AdjustScore(Box box)
-        {
-            if (box.capturedBy != -1)
-            {   
-                score[box.capturedBy] += 1;
-            }
         }
     }
 }

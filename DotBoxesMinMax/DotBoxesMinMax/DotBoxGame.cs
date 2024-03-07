@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
@@ -31,8 +32,8 @@ namespace DotBoxesMinMax
             //lineToConnect = Tuple.Create(p1, p2);
             //board.MakeMove(lineToConnect, AIsTurn);
 
-            //p1 = Tuple.Create(1, 1);
-            //p2 = Tuple.Create(1, 2);
+            //p1 = Tuple.Create(0, 0);
+            //p2 = Tuple.Create(0, 1);
             //lineToConnect = Tuple.Create(p1, p2);
             //board.MakeMove(lineToConnect, playersTurn);
 
@@ -89,42 +90,27 @@ namespace DotBoxesMinMax
             Tuple<Tuple<int, int>, Tuple<int, int>> chosenLine = null;
             if (board.availableLines.Count >= (int)numOfLinesTotal / 2)
             {
-                for (int i = 0; i < 10; i++)
+                // Complete the box if any
+                if (board.lastLineForBoxesWithThreeConnections.Any())
                 {
-                    var randomLine = board.availableLines.ElementAt(
-                        randomizer.Next(board.availableLines.Count));
-
-                    int firstDotRow = randomLine.Item1.Item1;
-                    int firstDotCol = randomLine.Item1.Item2;
-                    bool isHorizontal = board.IsHorizontalLine(randomLine);
-                    int varToChange = (isHorizontal ? firstDotRow : firstDotCol);
-                    bool bothBoxesPassed = true;
-
-                    // If horizontal, check top and bottom boxes that share the same line
-                    // if vertical, check left and right boxes that share the same line
-                    for (int j = varToChange; j >= varToChange - 1; j--)
+                    chosenLine = board.lastLineForBoxesWithThreeConnections.Dequeue();
+                }
+                else
+                {
+                    // Otherwise randomly choose
+                    for (int i = 0; i < 10; i++)
                     {
+                        var randomLine = board.availableLines.ElementAt(
+                            randomizer.Next(board.availableLines.Count));
 
-                        if (j < 0 ||
-                            isHorizontal && j >= board.height - 1 ||
-                            !isHorizontal && j >= board.width - 1)
-                            continue;
-                        bool checkPassed = false;
-                        Box box = isHorizontal ? board.boxes[j][firstDotCol] : 
-                            board.boxes[firstDotRow][j];
+                        // Check connections but don't connect the lines yet
+                        int[] numConnections = board.CheckBothBoxConnections(
+                            false, AIsTurn, randomLine);
 
-                        int numOfLinesConnectedForThisBox = box.CheckNumConnectedLines();
-
-                        if (numOfLinesConnectedForThisBox < 2 ||
-                            numOfLinesConnectedForThisBox == 3)
-                            checkPassed = true;
-
-                        bothBoxesPassed = bothBoxesPassed && checkPassed;
-                    }
-                    if (bothBoxesPassed)
-                    {
-                        chosenLine = randomLine;
-                        break;
+                        if (numConnections[0] < 2 && numConnections[1] < 2)
+                        {
+                            chosenLine = randomLine;
+                        }
                     }
                 }
             }
