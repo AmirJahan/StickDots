@@ -18,6 +18,7 @@ public class GridGenerator : MonoBehaviour
     private Vector3 _topRightPoint;
     private List<GameObject> _gridPoints = new List<GameObject>();
     private Camera _mainCamera;
+    private Bounds _bounds;
 
     private void Awake()
     {
@@ -49,6 +50,7 @@ public class GridGenerator : MonoBehaviour
         SetCamera();
     }
 
+    // Creates all of the dots
     public void GenerateGrid()
     {
         GameObject Dots = new GameObject("Dots");
@@ -74,6 +76,7 @@ public class GridGenerator : MonoBehaviour
         }
 
         _topRightPoint = _gridPoints[_gridPoints.Count - 1].transform.position;
+        _bounds.Encapsulate( _topRightPoint );
     }
 
     public void GenerateBackgroundBoxes()
@@ -98,11 +101,13 @@ public class GridGenerator : MonoBehaviour
         }
     }
 
+    // Places the camera in the center of the grid and adjusts size to bounding box size 
     public void SetCamera()
     {
         _mainCamera.transform.position = Vector3.Lerp(_gridOrigin, _topRightPoint, 0.5f);
         _mainCamera.transform.position = new Vector3(_mainCamera.transform.position.x, _mainCamera.transform.position.y, -5f);
-        _mainCamera.orthographicSize = _gridX / _mainCamera.aspect;
+
+        _mainCamera.orthographicSize = _bounds.size.x;
     }
 }
 
