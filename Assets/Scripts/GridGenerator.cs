@@ -14,6 +14,7 @@ public class GridGenerator : MonoBehaviour
     [SerializeField] Vector3 _topRightPoint;
     private List<GameObject> _gridPoints = new List<GameObject>();
     private Camera _mainCamera;
+    [SerializeField] private Bounds _bounds;
 
     private void Awake()
     {
@@ -30,6 +31,13 @@ public class GridGenerator : MonoBehaviour
         SetCamera();
     }
 
+    private void FixedUpdate()
+    {
+        if (_mainCamera == null) return;
+
+        _mainCamera.orthographicSize = Input.mouseScrollDelta.y;
+    }
+
     void GenerateGrid()
     {
         for (int x = 0; x < _gridX; x++)
@@ -43,13 +51,17 @@ public class GridGenerator : MonoBehaviour
         }
 
         _topRightPoint = _gridPoints[_gridPoints.Count - 1].transform.position;
+        _bounds.Encapsulate(_topRightPoint);
     }
 
     void SetCamera()
     {
+
+        // TODO: Create a bounding box for the camera fitting 
         _mainCamera.transform.position = Vector3.Lerp(_gridOrigin, _topRightPoint, 0.5f);
         _mainCamera.transform.position = new Vector3(_mainCamera.transform.position.x, _mainCamera.transform.position.y, -5f);
-        _mainCamera.orthographicSize = _gridSize / _mainCamera.aspect;
+
+        _mainCamera.orthographicSize = _bounds.size.x;
     }
 }
 

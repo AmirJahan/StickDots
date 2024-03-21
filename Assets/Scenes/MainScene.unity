@@ -219,9 +219,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _drawPoint: {fileID: 5944368285946637303, guid: 233a8c4d956827c45bd0950727bb8cdd, type: 3}
   _gridSize: 10
-  _distance: 2
+  _distance: 1
   _gridOrigin: {x: 0, y: 0, z: 0}
   _topRightPoint: {x: 0, y: 0, z: 0}
+  _bounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
 --- !u!4 &1279428337
 Transform:
   m_ObjectHideFlags: 0
