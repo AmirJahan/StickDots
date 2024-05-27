@@ -55,30 +55,13 @@ public class BoxComplete : MonoBehaviour
         int y = (int)boxCoordAndCapturedBy.y;
         winPlayer = (int)boxCoordAndCapturedBy.z;
 
-        //get the specific gameobject render by hash code
-        Renderer ren = boxBackgrounds[getBoxHash(x, y)].gameObject.GetComponent<Renderer>();
-
-        // Activate the game object
-        ren.gameObject.SetActive(true);
-
-        // Set the active color for animation
-        activeColor = new Material(completionShader);
-        activeColor.SetColor("_backgroundColor", GamePlayManager.Instance.players[winPlayer].myColor);
-        ren.material = activeColor;
-        blingMode = true;
-
-        if (audioClip != null)
-        {
-            AudioSource.PlayClipAtPoint(audioClip, transform.position);
-        }
-
         // Add the box coordinate to the queue
         boxesToAnimate.Enqueue(boxCoordAndCapturedBy);
 
         // If this is the first box to animate, start the animation coroutine
         if (boxesToAnimate.Count == 1)
         {
-            float delayBetweenAnimations = 2.5f;
+            float delayBetweenAnimations = 0.5f;
             StartCoroutine(AnimateNextBoxAfterDelay(delayBetweenAnimations));
         }
     }
@@ -105,14 +88,8 @@ public class BoxComplete : MonoBehaviour
             ren.material = activeColor;
             blingMode = true;
 
-            // If audio clip is provided, play it
-            if (audioClip != null)
-            {
-                AudioSource.PlayClipAtPoint(audioClip, transform.position);
-            }
         }
     }
-
 
     private void ResetBling()
     {
