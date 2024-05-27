@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 
 public class CameraController : MonoBehaviour
@@ -89,13 +90,13 @@ public class CameraController : MonoBehaviour
     private void ZoomStart()
     {
         //Debug.Log("zoom start");
-        _zoomCoroutine = StartCoroutine(ZoomDetection());
+        if(!IsOnUI()) _zoomCoroutine = StartCoroutine(ZoomDetection());
     } 
     
     private void ZoomEnd()
     {
         //Debug.Log("zoom end");
-        StopCoroutine(_zoomCoroutine);
+        if(_zoomCoroutine != null)StopCoroutine(_zoomCoroutine);
     }
     
     IEnumerator ZoomDetection()
@@ -125,13 +126,18 @@ public class CameraController : MonoBehaviour
 
     
     //Method that drags the camera around the scene
-    public void OnDrag_Start(InputAction.CallbackContext ctx)
+    public void OnDrag(InputAction.CallbackContext ctx)
     {
+        
         // if click on dot, don't drag
-        if (!IsOnDot())
+        if (!IsOnDot() && !IsOnUI())
         {
             if (ctx.started) _origin = GetInputPosition();
             _isDragging = ctx.started || ctx.performed;
+        }
+        else if(ctx.canceled)
+        {
+            _isDragging = false;
         }
     }
 
@@ -196,12 +202,12 @@ public class CameraController : MonoBehaviour
         //if there is touch input
         if (touchInput)
         {
-            Debug.Log("finger position");
+            //Debug.Log("finger position");
             return GetFingerPosition();
         }
         else
         {
-            Debug.Log("mousePosition");
+            //Debug.Log("mousePosition");
             return GetMousePosition();
         }        
     }
@@ -249,6 +255,7 @@ public class CameraController : MonoBehaviour
     //function triggered when game end
     public void ResetCamera()
     {
+        if (IsOnUI()) return;
         resetCameraTimer = resetAnimationDuration;
         _controls.CameraMovement.Disable();
         GetComponent<PlayerInput>().currentActionMap.Disable();
@@ -272,21 +279,9 @@ public class CameraController : MonoBehaviour
         GetComponent<PlayerInput>().currentActionMap.Enable();
     }
 
-
-    /// <summary>
-    /// update function simulate event calling
-    /// remove the following when event is ready
-    /// </summary>    
-
-    [SerializeField] public bool gameEndEvent_TestingBool;
-
-    private void Update()
+    private bool IsOnUI()
     {
-        if (gameEndEvent_TestingBool)
-        {
-            gameEndEvent_TestingBool = false;
-            ResetCamera();
-        }
+        return EventSystem.current.IsPointerOverGameObject();
     }
 
     ////////////////////////////////////

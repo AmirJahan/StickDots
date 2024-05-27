@@ -151,7 +151,6 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   resetAnimationDuration: 0.2
-  gameEndEvent_TestingBool: 0
 --- !u!114 &-8860608012984692423
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -225,7 +224,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 8558894590637163729}
         m_TargetAssemblyTypeName: CameraController, Assembly-CSharp
-        m_MethodName: OnDrag_Start
+        m_MethodName: OnDrag
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -237,10 +236,6 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 20a0e43e-db39-4c08-a435-4dbd1403ff00
     m_ActionName: 'CameraMovement/Drag_Start[/Mouse/leftButton]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: d6691bfc-a76a-4b6c-a61f-bb45ac8b8b98
-    m_ActionName: 'CameraMovement/Drag_End[/Mouse/leftButton]'
   - m_PersistentCalls:
       m_Calls: []
     m_ActionId: 28ae9f33-87cb-47cf-9d80-da09431a4f51
@@ -265,6 +260,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 6a5cad5d-b18a-476e-990f-0fdb805964af
     m_ActionName: NoMovement/New action
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 4cb1e168-9e7a-4c62-aa8b-d3e2801eea17
+    m_ActionName: 'CameraMovement/DoubleTap[/Mouse/leftButton]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: CameraMovement
