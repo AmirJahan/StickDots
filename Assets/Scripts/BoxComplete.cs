@@ -101,7 +101,7 @@ public class BoxComplete : MonoBehaviour
         if (blingMode)
         {
             float offset = activeColor.GetFloat("_HighLightOffset");
-            activeColor.SetFloat("_HighLightOffset", offset + Time.deltaTime / 3.0f);
+            activeColor.SetFloat("_HighLightOffset", offset + Time.deltaTime / 1.0f);
             if (offset >= 1.0f) ResetBling();
         }
     }
