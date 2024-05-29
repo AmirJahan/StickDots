@@ -23,7 +23,7 @@ public class LeaderboardManager : MonoBehaviour
     public Transform scoresContainer;
     public TMP_InputField scoreEntered;
 
-    async void Awake()
+    void Awake()
     {
         if (Instance != null && Instance != this)
         {
@@ -34,10 +34,17 @@ public class LeaderboardManager : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(gameObject);
 
+        //await UnityServices.InitializeAsync();
+
+        //await SignInAnonymously();
+    }
+    async void OnEnable()
+    {
         await UnityServices.InitializeAsync();
 
         await SignInAnonymously();
     }
+
 
     async Task SignInAnonymously()
     {
