@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class DotTurn : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class DotTurn : MonoBehaviour
     }
     private void OnMouseDown()
     {
+        if (EventSystem.current.IsPointerOverGameObject()) return;
         int playerIndex = GamePlayManager.Instance.currentPlayerIndex;
         Color spriteColor = gameObject.GetComponent<SpriteRenderer>().color;
 

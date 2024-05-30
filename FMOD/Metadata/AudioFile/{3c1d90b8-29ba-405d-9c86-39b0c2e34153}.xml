@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{3c1d90b8-29ba-405d-9c86-39b0c2e34153}">
+		<property name="assetPath">
+			<value>05 Electronic, Beeps Bouncing Beeps Into Echo.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>47.039999999999999</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{25938ff2-c2e8-4501-a6c8-12f24b4ab9e6}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -1,9 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Rendering.LookDev;
+// using UnityEditor.Rendering.LookDev;
 using UnityEngine;
 using UnityEngine.UI;
-using static UnityEditor.Progress;
+// using static UnityEditor.Progress;
 
 public class PlayerContainer : MonoBehaviour
 {
@@ -53,21 +53,15 @@ public class PlayerContainer : MonoBehaviour
             {
                 posList.Add(new Vector2(i * layoutOffset, 0));
             }
-            Debug.Log("posList "+i + posList[i]);
         }
 
 
 
-        foreach (GameObject avator in avatorList)
-        {
-            Debug.Log(avator.name);
-        }
         Layout();
     }
 
     public void Layout()
     {
-        Debug.Log("Layout"+ avatorList.Count);
 
         if(avatorList.Count <= 0) { return; }
 
@@ -108,7 +102,7 @@ public class PlayerContainer : MonoBehaviour
                 avatorList[i].transform.SetSiblingIndex(newSiblingIndex);
             }
 
-            Debug.Log("index"+index);
+            //Debug.Log("index"+index);
             StartCoroutine(MoveToPos(avatorList[i], posList[index]));
         }
         times+=1;

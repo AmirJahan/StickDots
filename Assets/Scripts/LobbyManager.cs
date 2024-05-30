@@ -10,6 +10,10 @@ public class LobbyManager : MonoBehaviour
     [SerializeField] private GameObject createRoomPage;
     [SerializeField] private GameObject joinRoomPage;
     [SerializeField] private UnityEvent<Vector2> gameStart;
+    [SerializeField] private TextMeshProUGUI defaultXSize;
+    [SerializeField] private TextMeshProUGUI defaultYSize;
+    private int x;
+    private int y;
 
     public List<Player> playersInLobby = new List<Player>(); // Pass this list data to GameplayManager Players List
 
@@ -30,9 +34,21 @@ public class LobbyManager : MonoBehaviour
     public void GameStart()
     {
         // Slider slider = createRoomPage.GetComponentInChildren<Slider>();
+        x = int.Parse(defaultXSize.text);
+        y = int.Parse(defaultYSize.text);
 
-        int x = int.Parse(createRoomPage.transform.GetChild(1).GetComponentInChildren<TMP_InputField>().text);
-        int y = int.Parse(createRoomPage.transform.GetChild(2).GetComponentInChildren<TMP_InputField>().text);
+        string xSizeInput = createRoomPage.transform.GetChild(1).GetComponentInChildren<TMP_InputField>().text;
+        string ySizeInput = createRoomPage.transform.GetChild(2).GetComponentInChildren<TMP_InputField>().text;
+
+        if (xSizeInput != "")
+        {
+            x = int.Parse(xSizeInput);
+        }
+
+        if (ySizeInput != "")
+        {
+            y = int.Parse(ySizeInput);
+        }
 
         Debug.Log(x + " " + y);
 

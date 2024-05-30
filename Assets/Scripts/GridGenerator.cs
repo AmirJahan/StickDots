@@ -1,3 +1,4 @@
+using Photon.Pun;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -44,18 +45,16 @@ public class GridGenerator : MonoBehaviour
 
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
     public void CreateBoard()
     {
         _gridX = GamePlayManager.Instance.W;
         _gridY = GamePlayManager.Instance.H;
         _boxCompleteScript = FindFirstObjectByType<BoxComplete>();
         _boxBackgroundsParent = _boxCompleteScript.transform;
+        foreach(Transform transform in _boxBackgroundsParent)
+        {
+            Destroy(transform.gameObject);
+        }
         GenerateGrid();
         GenerateBackgroundBoxes();
         SetCamera();
@@ -93,12 +92,13 @@ public class GridGenerator : MonoBehaviour
 
     public void GenerateBackgroundBoxes()
     {
-        for (int x = 0; x < _gridX - 1; x++)
+        _boxCompleteScript.BoxBackgrounds = new List<GameObject>();
+        for (int y = 0; y < _gridY - 1; y++)
         {
-            for (int y = 0 ; y < _gridY - 1; y++)
+            for (int x = 0; x < _gridX - 1; x++)
             {
                 Vector3 spawnLocation = 
-                    new Vector3(y * _distance, x * _distance, 0f) + _boxOrigin;
+                    new Vector3(x * _distance, y * _distance, 0f) + _boxOrigin;
 
                 GameObject boxInstance = Instantiate(
                     _boxBackgroundPrefab, 

@@ -5,10 +5,16 @@ public class EmojiMenu : MonoBehaviour
 {
     [SerializeField] private GameObject[] buttonList;
     [SerializeField] private float activationInterval = 0.5f;
+    [SerializeField] private GameObject scrollUI;
 
     public void ButtonPopup()
     {
         StartCoroutine(ActivateButtonsWithInterval());
+    }
+
+    public void ActivateEmojiMenu() // SetActive UI that allows to scroll through emojis
+    {
+        scrollUI.SetActive(!scrollUI.activeSelf);
     }
 
     // Time interval between button activation (for animations)

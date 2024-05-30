@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
     [SerializeField] private Image indicator;
+    [SerializeField] private GameObject GameEndPage;
     public static UIManager Instance { get; private set; }
 
     private void Awake()
@@ -24,5 +25,13 @@ public class UIManager : MonoBehaviour
         Color color = indicator.color;
         color.a = 1f;
         indicator.color = color;
+    }
+
+    public void GameEndPageActive(bool active)
+    {
+        if (GameEndPage)
+        {
+            GameEndPage.SetActive(active);
+        }
     }
 }

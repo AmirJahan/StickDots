@@ -118,6 +118,8 @@ public class Board
         connectedLines.Add(lineToConnect);
         availableLines.Remove(lineToConnect);
 
+        // If size of availableLines is 0, invoke game over event
+
         // Connect the line and get the number of connected line for each box
         // Note: 1 move will affect 2 boxes
         int[] numConnectedLines = CheckBothBoxConnections(
@@ -189,7 +191,7 @@ public class Board
                 Vector3 boxCoordAndCapturedBy = isHorizontal ?
                     new Vector3(firstDotX, i, turnIndex) :
                     new Vector3(i, firstDotY, turnIndex);
-                GamePlayManager.Instance.CaptureBox(boxCoordAndCapturedBy);
+                GamePlayManager.Instance.CaptureBox(boxCoordAndCapturedBy, turnIndex);
             }
 
             index++;

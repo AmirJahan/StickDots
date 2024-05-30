@@ -1,7 +1,7 @@
 
-using System.Security.Cryptography;
+// using System.Security.Cryptography;
 using UnityEngine;
-using static UnityEditor.Searcher.SearcherWindow.Alignment;
+// using static UnityEditor.Searcher.SearcherWindow.Alignment;
 
 enum BitIndex
 {

@@ -1,12 +1,16 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using FMODUnity;
+using FMOD.Studio;
+using GameEvents;
+using UnityEngine.Assertions.Must;
 
 public class Timer : MonoBehaviour
 {
     [SerializeField] private Image uiFill;
     [SerializeField] public TextMeshProUGUI timerText;
-    [SerializeField] public AudioClip beepSound;
+    [SerializeField] private BoolEventAsset _playBeepSound;
     [SerializeField] public float timeRemaining;
     [SerializeField] private float originalTime;
     [SerializeField] private int TimeForEachTurn;
@@ -32,18 +36,10 @@ public class Timer : MonoBehaviour
             {
                 GamePlayManager.Instance.NextTurn();
             }
-            else
+
+            if (Mathf.Abs(timeRemaining - 5.0f) < 0.01f)
             {
-                if (timeRemaining <= 10 && timeRemaining > 5)
-                {
-                    if (beepSound != null)
-                        AudioSource.PlayClipAtPoint(beepSound, transform.position);
-                }
-                else if (timeRemaining <= 5)
-                {
-                    if (beepSound != null)
-                        AudioSource.PlayClipAtPoint(beepSound, transform.position);
-                }
+                _playBeepSound.Invoke(true);
             }
 
             if (timeRemaining <= 3)
@@ -64,7 +60,7 @@ public class Timer : MonoBehaviour
     public void StartTimer()
     {
         int seconds = TimeForEachTurn;
-        timeRemaining = seconds;
+        timeRemaining = seconds + 1;
         originalTime = timeRemaining;
         isRunning = true;
     }

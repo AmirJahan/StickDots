@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{0e557c07-635f-4f43-851c-616f9882c770}">
+		<property name="assetPath">
+			<value>38 Spinner Underscore _60.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>62.613333333333337</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{25938ff2-c2e8-4501-a6c8-12f24b4ab9e6}</destination>
+		</relationship>
+	</object>
+</objects>

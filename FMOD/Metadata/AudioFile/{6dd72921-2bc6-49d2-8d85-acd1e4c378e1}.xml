@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{6dd72921-2bc6-49d2-8d85-acd1e4c378e1}">
+		<property name="assetPath">
+			<value>04 Harmonic Idiom 1_30.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>89.813333333333333</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{25938ff2-c2e8-4501-a6c8-12f24b4ab9e6}</destination>
+		</relationship>
+	</object>
+</objects>

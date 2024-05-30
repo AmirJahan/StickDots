@@ -1,5 +1,7 @@
+using Photon.Pun;
 using System.Collections;
 using System.Collections.Generic;
+using System.Drawing;
 using UnityEngine;
 
 public class LineController : MonoBehaviour
@@ -16,10 +18,10 @@ public class LineController : MonoBehaviour
     [SerializeField] private GameObject _LineStaticPrefab;
     GamePlayManager _gamePlayManager;
 
-
     //public Color validColor = Color.green;
     //public Color invalidColor = Color.red;
     private bool drawing = false;
+    private PhotonView photonView;
 
     private void Awake()
     {
@@ -35,6 +37,7 @@ public class LineController : MonoBehaviour
 
     private void Start()
     {
+        photonView = PhotonView.Get(this);
         _gamePlayManager = FindAnyObjectByType<GamePlayManager>();
     }
 
@@ -57,6 +60,12 @@ public class LineController : MonoBehaviour
     // call on finger touch event
     private void OnTouch()
     {
+
+        if (PhotonNetwork.LocalPlayer.ActorNumber - 1 !=
+            GamePlayManager.Instance.currentPlayerIndex)
+        {
+            return;
+        }
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
 
@@ -80,6 +89,13 @@ public class LineController : MonoBehaviour
     //call on finger release event
     private void OnRelease()
     {
+
+        if (PhotonNetwork.LocalPlayer.ActorNumber - 1 !=
+            GamePlayManager.Instance.currentPlayerIndex)
+        {
+            return;
+        }
+
         //strink lineDrawable
         if (drawing)
         {
@@ -106,11 +122,12 @@ public class LineController : MonoBehaviour
                 if (_p1.y == _p2.y && Mathf.Abs(_p1.x - _p2.x) == 1 ||
                     _p1.x == _p2.x && Mathf.Abs(_p1.y - _p2.y) == 1)
                 {
-                    MakeLine(_dotPositions[0], _dotPositions[1]);
-
+                    //MakeLine(_dotPositions[0], _dotPositions[1]);
+                    photonView.RPC("MakeLine", RpcTarget.All, (Vector2)_dotPositions[0], (Vector2)_dotPositions[1]);
 
                     Debug.Log($"Player{GamePlayManager.Instance.currentPlayerIndex}: {_p1}, {_p2}");
-                    GamePlayManager.Instance.PlayersMove(_p1, _p2);
+                    //GamePlayManager.Instance.PlayersMove(_p1, _p2);
+                    GamePlayManager.Instance.PlayersMoveRPC(_p1, _p2);
 
                     //hide lineDrawable if creating new line
                     _LineDrawable.SetActive(false);
@@ -159,12 +176,14 @@ public class LineController : MonoBehaviour
         return Camera.main.ScreenToWorldPoint(screenPoint);
     }
 
-
+    [PunRPC]
     public void MakeLine(Vector2 p1, Vector2 p2)
     {
+
         /*
         LineRenderer lineRenderer = Instantiate(_lineRendererPrefab, _lineParent.transform);
         */
+
         GameObject lineSprite = Instantiate(_LineStaticPrefab, _lineParent.transform);
         lineSprite.GetComponentInChildren<SpriteRenderer>().color = _gamePlayManager.players[_gamePlayManager.currentPlayerIndex].myColor;
         //Vector3[] dotsToConnect = new Vector3[2];
