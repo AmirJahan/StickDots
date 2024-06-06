@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 6a8fbb53372594131b4ac644c3492130
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 140137
+  packageName: 'Cross-Platform Native Plugins : Essential Kit (Free Version)'
+  packageVersion: 2.7.1
+  assetPath: Assets/Plugins/VoxelBusters/CoreLibrary/Runtime/CoreLibrary/Components/Scheduler.cs
+  uploadId: 652686

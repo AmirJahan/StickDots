@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: f924f934566204936b517248f5f8f4bd
+timeCreated: 1576323713
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 140137
+  packageName: 'Cross-Platform Native Plugins : Essential Kit (Free Version)'
+  packageVersion: 2.7.1
+  assetPath: Assets/Plugins/VoxelBusters/CoreLibrary/Editor/CoreLibrary/Inspectors/FileBrowserAttributeDrawer.cs
+  uploadId: 652686

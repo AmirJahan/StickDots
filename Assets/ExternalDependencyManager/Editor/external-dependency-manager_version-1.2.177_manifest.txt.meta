@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 2764c5ea3b354f3cb7ca80028fd08da2
+labels:
+- gvh
+- gvh_manifest
+- gvh_version-1.2.177
+- gvhp_exportpath-ExternalDependencyManager/Editor/external-dependency-manager_version-1.2.177_manifest.txt
+- gvhp_manifestname-0External Dependency Manager
+- gvhp_manifestname-play-services-resolver
+timeCreated: 1474401009
+licenseType: Store
+TextScriptImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 140137
+  packageName: 'Cross-Platform Native Plugins : Essential Kit (Free Version)'
+  packageVersion: 2.7.1
+  assetPath: Assets/ExternalDependencyManager/Editor/external-dependency-manager_version-1.2.177_manifest.txt
+  uploadId: 652686

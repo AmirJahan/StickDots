@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 2e381fcec245947308b45288300bab9f
+timeCreated: 1547647223
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 140137
+  packageName: 'Cross-Platform Native Plugins : Essential Kit (Free Version)'
+  packageVersion: 2.7.1
+  assetPath: Assets/Plugins/VoxelBusters/EssentialKit/Examples/Scenes/DatePickerDemo.unity
+  uploadId: 652686

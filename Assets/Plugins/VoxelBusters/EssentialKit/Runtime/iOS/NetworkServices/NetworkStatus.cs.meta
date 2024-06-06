@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: abde3f2d1e63d4dbcaa03cb3f071c643
+timeCreated: 1553497736
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 140137
+  packageName: 'Cross-Platform Native Plugins : Essential Kit (Free Version)'
+  packageVersion: 2.7.1
+  assetPath: Assets/Plugins/VoxelBusters/EssentialKit/Runtime/iOS/NetworkServices/NetworkStatus.cs
+  uploadId: 652686

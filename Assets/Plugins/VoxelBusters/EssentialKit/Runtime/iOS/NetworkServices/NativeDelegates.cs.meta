@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: dfd6b4c1f203f413dad9ed0cfaa1ed2c
+timeCreated: 1553345360
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 140137
+  packageName: 'Cross-Platform Native Plugins : Essential Kit (Free Version)'
+  packageVersion: 2.7.1
+  assetPath: Assets/Plugins/VoxelBusters/EssentialKit/Runtime/iOS/NetworkServices/NativeDelegates.cs
+  uploadId: 652686

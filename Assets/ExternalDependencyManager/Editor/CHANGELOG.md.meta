@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 6cdb6572965940cb9bcd8ce572951c7d
+labels:
+- gvh
+- gvh_version-1.2.177
+- gvhp_exportpath-ExternalDependencyManager/Editor/CHANGELOG.md
+timeCreated: 1584567712
+licenseType: Store
+TextScriptImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 140137
+  packageName: 'Cross-Platform Native Plugins : Essential Kit (Free Version)'
+  packageVersion: 2.7.1
+  assetPath: Assets/ExternalDependencyManager/Editor/CHANGELOG.md
+  uploadId: 652686

@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 67b590bef29014bbb9ff34e87021cac5
+timeCreated: 1576912639
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 140137
+  packageName: 'Cross-Platform Native Plugins : Essential Kit (Free Version)'
+  packageVersion: 2.7.1
+  assetPath: Assets/Plugins/VoxelBusters/EssentialKit/Runtime/Core/NativeUI/AlertDialogStyle.cs
+  uploadId: 652686

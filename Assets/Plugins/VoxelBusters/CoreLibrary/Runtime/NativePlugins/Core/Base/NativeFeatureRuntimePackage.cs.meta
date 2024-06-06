@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 5da41611b7e7b47fdbf18a8ec6cb3c0c
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 140137
+  packageName: 'Cross-Platform Native Plugins : Essential Kit (Free Version)'
+  packageVersion: 2.7.1
+  assetPath: Assets/Plugins/VoxelBusters/CoreLibrary/Runtime/NativePlugins/Core/Base/NativeFeatureRuntimePackage.cs
+  uploadId: 652686

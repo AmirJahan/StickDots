@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 53106115b89de4cc6a667adc369f97b8
+timeCreated: 1549313181
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 140137
+  packageName: 'Cross-Platform Native Plugins : Essential Kit (Free Version)'
+  packageVersion: 2.7.1
+  assetPath: Assets/Plugins/VoxelBusters/CoreLibrary/Prefabs/Examples/Row.prefab
+  uploadId: 652686

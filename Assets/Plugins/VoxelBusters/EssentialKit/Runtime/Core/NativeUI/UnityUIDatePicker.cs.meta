@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: dc7a258ee1c3748389e6a1d369df5d72
+timeCreated: 1596309993
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 140137
+  packageName: 'Cross-Platform Native Plugins : Essential Kit (Free Version)'
+  packageVersion: 2.7.1
+  assetPath: Assets/Plugins/VoxelBusters/EssentialKit/Runtime/Core/NativeUI/UnityUIDatePicker.cs
+  uploadId: 652686

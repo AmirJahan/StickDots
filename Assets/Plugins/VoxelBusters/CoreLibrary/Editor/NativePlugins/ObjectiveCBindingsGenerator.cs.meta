@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 49cf1f2da22e64129b00da78026ab7a2
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 140137
+  packageName: 'Cross-Platform Native Plugins : Essential Kit (Free Version)'
+  packageVersion: 2.7.1
+  assetPath: Assets/Plugins/VoxelBusters/CoreLibrary/Editor/NativePlugins/ObjectiveCBindingsGenerator.cs
+  uploadId: 652686

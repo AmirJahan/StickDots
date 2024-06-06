@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 8c0a1d0702e8d4c60b5f7cfd69c54073
+timeCreated: 1562229135
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 140137
+  packageName: 'Cross-Platform Native Plugins : Essential Kit (Free Version)'
+  packageVersion: 2.7.1
+  assetPath: Assets/Plugins/VoxelBusters/CoreLibrary/Prefabs/Examples/SubTitle.prefab
+  uploadId: 652686

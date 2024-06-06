@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 9c5bbe7cdfcd444908de802817480fbf
+timeCreated: 1577514657
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 140137
+  packageName: 'Cross-Platform Native Plugins : Essential Kit (Free Version)'
+  packageVersion: 2.7.1
+  assetPath: Assets/Plugins/VoxelBusters/CoreLibrary/Editor/CoreLibrary/Inspectors/InterfaceFieldAttributeDrawer.cs
+  uploadId: 652686

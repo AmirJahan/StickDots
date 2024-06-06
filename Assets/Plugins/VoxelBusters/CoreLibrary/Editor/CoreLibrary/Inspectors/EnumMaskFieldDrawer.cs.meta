@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 11e33d767c33a4a10bc1e378ed17ef72
+timeCreated: 1579074419
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 140137
+  packageName: 'Cross-Platform Native Plugins : Essential Kit (Free Version)'
+  packageVersion: 2.7.1
+  assetPath: Assets/Plugins/VoxelBusters/CoreLibrary/Editor/CoreLibrary/Inspectors/EnumMaskFieldDrawer.cs
+  uploadId: 652686

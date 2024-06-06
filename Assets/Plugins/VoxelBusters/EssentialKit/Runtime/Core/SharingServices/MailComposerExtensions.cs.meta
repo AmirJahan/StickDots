@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: b54f1cc27b46141e184b12fb23a7f05e
+timeCreated: 1564039002
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 140137
+  packageName: 'Cross-Platform Native Plugins : Essential Kit (Free Version)'
+  packageVersion: 2.7.1
+  assetPath: Assets/Plugins/VoxelBusters/EssentialKit/Runtime/Core/SharingServices/MailComposerExtensions.cs
+  uploadId: 652686

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 347661ae03c1d4bb2a47971c48c56a6c
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 140137
+  packageName: 'Cross-Platform Native Plugins : Essential Kit (Free Version)'
+  packageVersion: 2.7.1
+  assetPath: Assets/Plugins/VoxelBusters/CoreLibrary/Runtime/NativePlugins/Android/VoxelBusters.CoreLibrary.NativePlugins.AndroidModule.asmdef
+  uploadId: 652686

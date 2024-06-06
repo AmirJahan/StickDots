@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 36398f07f7cd54ddfb980b7f6f4922e5
+timeCreated: 1576908000
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 140137
+  packageName: 'Cross-Platform Native Plugins : Essential Kit (Free Version)'
+  packageVersion: 2.7.1
+  assetPath: Assets/Plugins/VoxelBusters/EssentialKit/Runtime/iOS/SharingServices/NativeMessageComposer.cs
+  uploadId: 652686

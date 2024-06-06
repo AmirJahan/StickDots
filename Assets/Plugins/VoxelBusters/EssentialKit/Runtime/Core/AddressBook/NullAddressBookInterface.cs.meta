@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 3af01690d4b0248bc8ea552b9df971d7
+timeCreated: 1562653105
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 140137
+  packageName: 'Cross-Platform Native Plugins : Essential Kit (Free Version)'
+  packageVersion: 2.7.1
+  assetPath: Assets/Plugins/VoxelBusters/EssentialKit/Runtime/Core/AddressBook/NullAddressBookInterface.cs
+  uploadId: 652686

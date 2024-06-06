@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 2bcdd828690f948a2b4063c203217b94
+timeCreated: 1547647223
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 140137
+  packageName: 'Cross-Platform Native Plugins : Essential Kit (Free Version)'
+  packageVersion: 2.7.1
+  assetPath: Assets/Plugins/VoxelBusters/EssentialKit/Examples/Scenes/MailComposerDemo.unity
+  uploadId: 652686

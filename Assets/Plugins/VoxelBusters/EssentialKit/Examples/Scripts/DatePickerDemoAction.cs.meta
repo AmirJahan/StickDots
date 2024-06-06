@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 3d0946b0907ee4c6ba7626f03eef3e38
+timeCreated: 1549358384
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 140137
+  packageName: 'Cross-Platform Native Plugins : Essential Kit (Free Version)'
+  packageVersion: 2.7.1
+  assetPath: Assets/Plugins/VoxelBusters/EssentialKit/Examples/Scripts/DatePickerDemoAction.cs
+  uploadId: 652686

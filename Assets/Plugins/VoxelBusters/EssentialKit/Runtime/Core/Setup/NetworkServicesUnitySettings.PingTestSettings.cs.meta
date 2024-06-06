@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: b62bccc92f23a4660a4ba1940ad83ab2
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 140137
+  packageName: 'Cross-Platform Native Plugins : Essential Kit (Free Version)'
+  packageVersion: 2.7.1
+  assetPath: Assets/Plugins/VoxelBusters/EssentialKit/Runtime/Core/Setup/NetworkServicesUnitySettings.PingTestSettings.cs
+  uploadId: 652686

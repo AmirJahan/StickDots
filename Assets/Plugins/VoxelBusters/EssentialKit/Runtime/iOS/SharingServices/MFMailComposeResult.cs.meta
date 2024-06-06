@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: bddc09513b5a747a0a98a0bba38f4878
+timeCreated: 1553001055
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 140137
+  packageName: 'Cross-Platform Native Plugins : Essential Kit (Free Version)'
+  packageVersion: 2.7.1
+  assetPath: Assets/Plugins/VoxelBusters/EssentialKit/Runtime/iOS/SharingServices/MFMailComposeResult.cs
+  uploadId: 652686

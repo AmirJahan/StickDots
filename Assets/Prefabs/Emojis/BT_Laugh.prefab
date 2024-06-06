@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1668212736694380536}
   - component: {fileID: 1509417652169598881}
   - component: {fileID: 2728605166572579226}
+  - component: {fileID: 4988645278063548125}
   m_Layer: 5
   m_Name: BT_Laugh
   m_TagString: Untagged
@@ -68,7 +69,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a022bcda459ebee469e765e072ea2987, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1a8d0cee17368514b96c750879caf1b2, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -151,9 +152,8 @@ MonoBehaviour:
   spawnTransform: {fileID: 0}
   canSpawnEmoji: 1
   emojiLifeTime: 5
-  _emojiIndex: 0
   _userIndex: 0
-  _userName: 
+  _userName: Tiago
 --- !u!95 &2728605166572579226
 Animator:
   serializedVersion: 7
@@ -176,3 +176,25 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4988645278063548125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6163886670630993219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0

@@ -196,12 +196,10 @@ public class CameraController : MonoBehaviour
         //if there is touch input
         if (touchInput)
         {
-            Debug.Log("finger position");
             return GetFingerPosition();
         }
         else
         {
-            Debug.Log("mousePosition");
             return GetMousePosition();
         }        
     }

@@ -19,21 +19,21 @@ public class EmojiController : MonoBehaviour
 
     private void Awake()
     {
+        Debug.Log("Awake called");
         spawnTransform = GameObject.FindGameObjectWithTag("EmojiSpawn").transform;
         canSpawnEmoji = true;
-
         gamePlayManager = FindAnyObjectByType<GamePlayManager>();
-
-        //PhotonNetwork.LocalPlayer.
     }
 
     public void BTPlayEmoji()
     {
+        Debug.Log("BTPlayEmoji called");
         SpawnEmoji();
     }
     
     public void SpawnEmoji()               
     {
+        Debug.Log("SpawnEmoji called");
         gamePlayManager = FindAnyObjectByType<GamePlayManager>();
         if (canSpawnEmoji)
         {
@@ -42,6 +42,7 @@ public class EmojiController : MonoBehaviour
             {
                 _userIndex = player.playerIndex;
                 _userName = player.playerName;
+                Debug.Log($"Spawning emoji for user {_userName} at index {_userIndex}");
 
                 canSpawnEmoji = false;
                 StartCoroutine(EmojiCooldown());
@@ -61,16 +62,19 @@ public class EmojiController : MonoBehaviour
 
     IEnumerator NetworkDestroy(GameObject objectToDestroy)
     {
+        Debug.Log("NetworkDestroy called");
         yield return new WaitForSeconds(emojiLifeTime);
 
         if (objectToDestroy.GetComponent<PhotonView>().IsMine)
         {
+            Debug.Log("Destroying emoji");
             PhotonNetwork.Destroy(objectToDestroy);
         }
     }
 
     IEnumerator EmojiCooldown()
     {
+        Debug.Log("EmojiCooldown called");
         yield return new WaitForSeconds(emojiLifeTime);
         canSpawnEmoji = true;
     }

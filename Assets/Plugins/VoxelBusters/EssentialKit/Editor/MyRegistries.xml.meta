@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: aad07f5c8bb3d4afc96f3a1b8a71e6b7
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 140137
+  packageName: 'Cross-Platform Native Plugins : Essential Kit (Free Version)'
+  packageVersion: 2.7.1
+  assetPath: Assets/Plugins/VoxelBusters/EssentialKit/Editor/MyRegistries.xml
+  uploadId: 652686

@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 27e6f057169d34e1e93b6ade55a7eb7d
+timeCreated: 1590818662
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 140137
+  packageName: 'Cross-Platform Native Plugins : Essential Kit (Free Version)'
+  packageVersion: 2.7.1
+  assetPath: Assets/Plugins/VoxelBusters/CoreLibrary/Runtime/NativePlugins/Core/Interfaces/INativeFeatureUsagePermissionHandler.cs
+  uploadId: 652686

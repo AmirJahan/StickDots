@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 976e185699ff140fdb61f269f556fe93
+timeCreated: 1562303594
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 140137
+  packageName: 'Cross-Platform Native Plugins : Essential Kit (Free Version)'
+  packageVersion: 2.7.1
+  assetPath: Assets/Plugins/VoxelBusters/CoreLibrary/Prefabs/Examples/BackButton.prefab
+  uploadId: 652686

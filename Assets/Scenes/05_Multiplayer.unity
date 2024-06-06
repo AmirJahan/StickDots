@@ -391,7 +391,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e32350f7a9762234abb134242e538382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  backgroundMusicClip: {fileID: 8300000, guid: 0bd10478bdfe25c478cdf20d9f5d88bf, type: 3}
+  _menuMusic:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  _ingameMusic:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  _beepSound:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  _allBoxesSFX:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!1001 &1157439476
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -461,6 +488,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1433314066405832106, guid: 1cfe162195b033147bf0776326efe67f, type: 3}
+      propertyPath: sceneViewId
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2648851173630969989, guid: 1cfe162195b033147bf0776326efe67f, type: 3}
       propertyPath: beepSound
       value: 
@@ -472,6 +503,14 @@ PrefabInstance:
     - target: {fileID: 2776449416303004346, guid: 1cfe162195b033147bf0776326efe67f, type: 3}
       propertyPath: m_Name
       value: GampleyCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 6246369608550838417, guid: 1cfe162195b033147bf0776326efe67f, type: 3}
+      propertyPath: sceneViewId
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7315269122345195944, guid: 1cfe162195b033147bf0776326efe67f, type: 3}
+      propertyPath: sceneViewId
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7559901768634881255, guid: 1cfe162195b033147bf0776326efe67f, type: 3}
       propertyPath: m_Pivot.x
@@ -558,63 +597,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1cfe162195b033147bf0776326efe67f, type: 3}
---- !u!1001 &3964061465452272343
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 658138445933547822, guid: 2be58fd931fbc0c448c3abd8b3f6127f, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 103.95266
-      objectReference: {fileID: 0}
-    - target: {fileID: 658138445933547822, guid: 2be58fd931fbc0c448c3abd8b3f6127f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 30.173683
-      objectReference: {fileID: 0}
-    - target: {fileID: 658138445933547822, guid: 2be58fd931fbc0c448c3abd8b3f6127f, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 12.18293
-      objectReference: {fileID: 0}
-    - target: {fileID: 658138445933547822, guid: 2be58fd931fbc0c448c3abd8b3f6127f, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 658138445933547822, guid: 2be58fd931fbc0c448c3abd8b3f6127f, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 658138445933547822, guid: 2be58fd931fbc0c448c3abd8b3f6127f, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 658138445933547822, guid: 2be58fd931fbc0c448c3abd8b3f6127f, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 658138445933547822, guid: 2be58fd931fbc0c448c3abd8b3f6127f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 658138445933547822, guid: 2be58fd931fbc0c448c3abd8b3f6127f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 658138445933547822, guid: 2be58fd931fbc0c448c3abd8b3f6127f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4549277602932824224, guid: 2be58fd931fbc0c448c3abd8b3f6127f, type: 3}
-      propertyPath: m_Name
-      value: EmojiUI
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 2be58fd931fbc0c448c3abd8b3f6127f, type: 3}
 --- !u!1001 &5788286273275277794
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -716,5 +698,4 @@ SceneRoots:
   - {fileID: 389732498}
   - {fileID: 5788286273275277794}
   - {fileID: 530272746}
-  - {fileID: 3964061465452272343}
   - {fileID: 1157439476}

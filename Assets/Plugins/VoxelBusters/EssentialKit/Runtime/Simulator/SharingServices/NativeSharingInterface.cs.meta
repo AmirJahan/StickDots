@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 845124dcef214454987dac280adac134
+timeCreated: 1577083819
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 140137
+  packageName: 'Cross-Platform Native Plugins : Essential Kit (Free Version)'
+  packageVersion: 2.7.1
+  assetPath: Assets/Plugins/VoxelBusters/EssentialKit/Runtime/Simulator/SharingServices/NativeSharingInterface.cs
+  uploadId: 652686

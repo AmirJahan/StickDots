@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: e78c6d4e6915c4b88baa6bfeabe1624a
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 140137
+  packageName: 'Cross-Platform Native Plugins : Essential Kit (Free Version)'
+  packageVersion: 2.7.1
+  assetPath: Assets/Plugins/VoxelBusters/EssentialKit/Editor/BuildPipeline/Android/google-services.template
+  uploadId: 652686

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: da59bc017da8c40aba71c41ff276f950
+timeCreated: 1549375031
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 140137
+  packageName: 'Cross-Platform Native Plugins : Essential Kit (Free Version)'
+  packageVersion: 2.7.1
+  assetPath: Assets/Plugins/VoxelBusters/EssentialKit/Examples/Scenes/DemoMenu.unity
+  uploadId: 652686

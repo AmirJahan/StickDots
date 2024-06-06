@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: bfb3a80268dac420ab25cd26e09e4475
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 140137
+  packageName: 'Cross-Platform Native Plugins : Essential Kit (Free Version)'
+  packageVersion: 2.7.1
+  assetPath: Assets/Plugins/VoxelBusters/EssentialKit/Runtime/VoxelBusters.EssentialKit.asmdef
+  uploadId: 652686
