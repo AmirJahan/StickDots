@@ -16,7 +16,7 @@ public class AIRandom : Player
     {
         base.BeginTurn();
 
-        _availableLines = GamePlayManager.Instance._board.AvailableLines;
+        _availableLines = GamePlayManager.Instance.board.AvailableLines;
         _randomIndex = UnityEngine.Random.Range(0, _availableLines.Count - 1);
         _choosenLine = _availableLines.ElementAt(_randomIndex);
 

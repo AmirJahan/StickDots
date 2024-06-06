@@ -118,6 +118,8 @@ public class Board
         connectedLines.Add(lineToConnect);
         availableLines.Remove(lineToConnect);
 
+        // If size of availableLines is 0, invoke game over event
+
         // Connect the line and get the number of connected line for each box
         // Note: 1 move will affect 2 boxes
         int[] numConnectedLines = CheckBothBoxConnections(

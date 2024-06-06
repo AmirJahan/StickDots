@@ -124,7 +124,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1509417652169598881}
         m_TargetAssemblyTypeName: EmojiController, Assembly-CSharp
-        m_MethodName: SpawnEmoji
+        m_MethodName: BTPlayEmoji
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -149,6 +149,11 @@ MonoBehaviour:
   emojiPrefab: {fileID: 6284348987225274631, guid: f5a9f35d463cdec47841a0137b303f48, type: 3}
   emojiAnimation: laugh
   spawnTransform: {fileID: 0}
+  canSpawnEmoji: 1
+  emojiLifeTime: 5
+  _emojiIndex: 0
+  _userIndex: 0
+  _userName: 
 --- !u!95 &2728605166572579226
 Animator:
   serializedVersion: 7

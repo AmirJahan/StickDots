@@ -124,7 +124,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2854744052173926143}
         m_TargetAssemblyTypeName: EmojiController, Assembly-CSharp
-        m_MethodName: SpawnEmoji
+        m_MethodName: BTPlayEmoji
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -149,6 +149,11 @@ MonoBehaviour:
   emojiPrefab: {fileID: 1622674646756418327, guid: 143ee198bd3c03a43b4bd5e43aa4a5f7, type: 3}
   emojiAnimation: sad
   spawnTransform: {fileID: 0}
+  canSpawnEmoji: 1
+  emojiLifeTime: 5
+  _emojiIndex: 0
+  _userIndex: 0
+  _userName: 
 --- !u!95 &7913025898137080741
 Animator:
   serializedVersion: 7

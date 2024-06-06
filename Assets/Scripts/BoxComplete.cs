@@ -18,7 +18,6 @@ public class BoxComplete : MonoBehaviour
     [SerializeField] private Shader completionShader;
     [SerializeField] private AudioClip audioClip;
 
-    private int col;
     private int winPlayer;
     //[SerializeField] Player winPlayer;
     //[SerializeField] int col;
@@ -35,7 +34,7 @@ public class BoxComplete : MonoBehaviour
     {
         // Width in GameManager stores num of dots
         // For box need to -1
-        col = GamePlayManager.Instance.W - 1;
+        //col = GamePlayManager.Instance.W - 1;
         blingMode = false;
         ResetBling();
     }
@@ -43,7 +42,7 @@ public class BoxComplete : MonoBehaviour
     int getBoxHash(int x, int y)
     {
         // hash code for coord
-        return x + (y * (col));
+        return x + (y * (GamePlayManager.Instance.W - 1));
     }
 
     public void PlayCaptureBoxAnim(Vector3 boxCoordAndCapturedBy) 
