@@ -121,17 +121,29 @@ public class GamePlayManager : MonoBehaviour, IPunObservable
         //{
         //    EndTurn();
         //}
+        if(Input.GetKeyDown(KeyCode.Q) || (board != null && board.AvailableLines.Count == 0 && !isGameFinished))
+        {
+            isGameFinished = true;
+            UIManager.Instance.GameEndPageActive(true);
+
+            foreach (Player player in players)
+            {
+                player.UpdatePlayerProperties();
+            }
+            
+            if (_timer == null) { _timer = FindFirstObjectByType<Timer>(); }
+            _timer.StopTimer();
+            PlayGameOverAudio();
+        }
 
         //if (board != null && board.AvailableLines.Count == 0 && !isGameFinished)
         //{
-        //    {
-        //        isGameFinished = true;
-        //        UIManager.Instance.GameEndPageActive(true);
+        //    isGameFinished = true;
+        //    UIManager.Instance.GameEndPageActive(true);
 
-        //        if (_timer == null) { _timer = FindFirstObjectByType<Timer>(); }
-        //        _timer.StopTimer();
-        //        PlayGameOverAudio();
-        //    }
+        //    if (_timer == null) { _timer = FindFirstObjectByType<Timer>(); }
+        //    _timer.StopTimer();
+        //    PlayGameOverAudio();
         //}
     }
 

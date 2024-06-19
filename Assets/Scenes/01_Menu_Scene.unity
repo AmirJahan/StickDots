@@ -621,10 +621,17 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9088730024933341789, guid: 5448d985c1e16de43a4e132e5bb979ad, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9088730024933341789, guid: 5448d985c1e16de43a4e132e5bb979ad, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 645569129}
   m_SourcePrefab: {fileID: 100100000, guid: 5448d985c1e16de43a4e132e5bb979ad, type: 3}
 --- !u!114 &219004556 stripped
 MonoBehaviour:
@@ -651,6 +658,11 @@ MonoBehaviour:
 --- !u!1 &219004558 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2187167321304626647, guid: 5448d985c1e16de43a4e132e5bb979ad, type: 3}
+  m_PrefabInstance: {fileID: 219004555}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &219004559 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 6806852998509555077, guid: 5448d985c1e16de43a4e132e5bb979ad, type: 3}
   m_PrefabInstance: {fileID: 219004555}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &254937732 stripped
@@ -759,6 +771,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 9088730024933341789, guid: 5448d985c1e16de43a4e132e5bb979ad, type: 3}
   m_PrefabInstance: {fileID: 219004555}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &645569129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 645569128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9384edc35e587f04c94749d4e4a13709, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  refreshRate: 1
+  PlayerScoreView: {fileID: -3234990845370328536, guid: c26a554b14fb01e4db6b5ea1ace184b9, type: 3}
+  Container: {fileID: 219004559}
 --- !u!1 &904746145 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3992221863035329976, guid: 5448d985c1e16de43a4e132e5bb979ad, type: 3}

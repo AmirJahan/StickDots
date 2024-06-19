@@ -14,13 +14,8 @@ public class ResultManager : MonoBehaviour
     //[SerializeField] private LeaderboardScoreView leaderboardScoreView;
     //[SerializeField] private Transform container;
 
-    //private void OnEnable()
-    //{
-    //    //LeaderboardManager.Instance.LoadScoresAsync();
-    //}
-    private void Start()
+    private void OnEnable()
     {
-        
         players = GamePlayManager.Instance.players.ToList();
 
         SortPlayersByScore();
@@ -31,6 +26,12 @@ public class ResultManager : MonoBehaviour
             scoreView.Initialize(player.rank.ToString(), player.name,
             player.score.ToString());
         }
+    }
+
+    private void Start()
+    {
+        
+        
     }
 
     public void SortPlayersByScore()
